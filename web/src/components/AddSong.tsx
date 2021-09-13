@@ -1,7 +1,9 @@
 import React from "react";
-import { Input, Box, Button, Text } from "@chakra-ui/react";
+import { Input, Box, Button, Text, useDisclosure } from "@chakra-ui/react";
+import { SearchMusic } from ".";
 
 export const AddSong: React.FC = () => {
+  const _searchPanel = useDisclosure();
   return (
     <Box
       padding={"10px"}
@@ -10,21 +12,18 @@ export const AddSong: React.FC = () => {
       mt={"20px"}
     >
       <Text mb={"5px"} fontWeight={"bold"} fontSize="20px">
-        Add Song:{" "}
+        Add Song{" "}
       </Text>
-      <Input
-        p={"14px 7px"}
+
+      <Button
+        bg={"#232323"}
+        color="white"
+        onClick={() => _searchPanel.onOpen()}
         fontWeight="bold"
-        mb={"10px"}
-        bg={"#38383878"}
-        size={"lg"}
-        variant={"unstyled"}
-      />
-      {/*
-      <Button bg={"#232323"} color="white" fontWeight="bold">
-        Save !
+      >
+        Add !
       </Button>
-        */}
+      <SearchMusic {..._searchPanel} />
     </Box>
   );
 };
