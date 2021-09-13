@@ -1,7 +1,7 @@
 import React from "react";
 import { Input, Box, Button, Text } from "@chakra-ui/react";
 
-export const Register: React.FC = () => {
+export const AddSong: React.FC = () => {
   return (
     <Box
       padding={"10px"}
@@ -10,7 +10,7 @@ export const Register: React.FC = () => {
       mt={"20px"}
     >
       <Text mb={"5px"} fontWeight={"bold"} fontSize="20px">
-        Username:{" "}
+        Add Song:{" "}
       </Text>
       <Input
         p={"14px 7px"}
@@ -20,9 +20,11 @@ export const Register: React.FC = () => {
         size={"lg"}
         variant={"unstyled"}
       />
+      {/*
       <Button bg={"#232323"} color="white" fontWeight="bold">
         Save !
       </Button>
+        */}
     </Box>
   );
 };
